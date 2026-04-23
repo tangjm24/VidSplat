@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors.">
+  <meta name="keywords" content="VidSplat, 3D Gaussian Splatting, Sparse-view Reconstruction, Video Diffusion, Novel View Synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b>ACM SIGGRAPH 2026 Conference Paper</b></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/xxxx.xxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/xxxx.xxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/xxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/tangjm24/VidSplat"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="VidSplat teaser" width="100%">
+      <h2 class="subtitle has-text-centered" style="margin-top: 15px;">
+        We highlight the strength of <b>VidSplat</b> in large-scale scene reconstruction and novel view synthesis
+        using only <b>5 input views</b> (top), where recent sparse-view reconstruction methods fail to recover
+        reasonable surfaces. We also demonstrate our ability to generate a complete scene from a <b>single input
+        image</b>, either with all-around coverage (bottom-left) or outward-expanding completion (bottom-right).
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Gaussian Splatting has achieved remarkable progress in multi-view surface reconstruction,
+            yet it exhibits notable degradation when only few views are available. Although recent
+            efforts alleviate this issue by enhancing multi-view consistency to produce plausible
+            surfaces, they struggle to infer unseen, occluded, or weakly constrained regions beyond
+            the input coverage.
+          </p>
+          <p>
+            To address this limitation, we present <b>VidSplat</b>, a training-free generative
+            reconstruction framework that leverages powerful video diffusion priors to iteratively
+            synthesize novel views that compensate for missing input coverage, and thereby recover
+            complete 3D scenes from sparse inputs. Specifically, we tackle two key challenges that
+            enable the effective integration of generation and reconstruction. First, for 3D
+            consistent generation, we elaborate a training-free, stage-wise denoising strategy that
+            adaptively guides the denoising direction toward the underlying geometry using the
+            rendered RGB and mask images. Second, to enhance the reconstruction, we develop an
+            iterative mechanism that samples camera trajectories, explores unobserved regions,
+            synthesizes novel views, and supplements training through confidence weighted refinement.
+          </p>
+          <p>
+            VidSplat performs robustly to sparse input and even a single image. Extensive experiments
+            on widely used benchmarks demonstrate our superior performance in sparse-view scene
+            reconstruction.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!--
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/xxxx?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method Overview. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/method_overview.png" alt="Method overview" width="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Given sparse input views, we sample novel camera trajectories and employ a
+            camera-controlled video diffusion model (VDM) with our geometry-guided denoising strategy
+            to generate additional views. In the initialization stage, RGB and mask images rendered
+            from point cloud are used as VDM inputs, and the generated views are used to complete the
+            initial point cloud. In the training stage, Gaussian-rendered RGBs and mesh-rendered masks
+            are used as inputs, and the generated views are used to expand the training view set.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method Overview. -->
+
+    <!-- Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <h3 class="title is-4">Surface Reconstruction on TanksAndTemples</h3>
+        <div class="content has-text-centered">
+          <img src="./static/images/results_tnt.png" alt="Results on TanksAndTemples" width="100%">
+        </div>
+
+        <h3 class="title is-4">Surface Reconstruction on Replica</h3>
+        <div class="content has-text-centered">
+          <img src="./static/images/results_replica.png" alt="Results on Replica" width="100%">
+        </div>
+
+        <h3 class="title is-4">Novel View Synthesis on DL3DV</h3>
+        <div class="content has-text-centered">
+          <img src="./static/images/results_dl3dv.png" alt="Results on DL3DV" width="100%">
+        </div>
+
+        <h3 class="title is-4">Single-View Reconstruction</h3>
+        <div class="content has-text-centered">
+          <img src="./static/images/singleview_recon.png" alt="Single-view reconstruction" width="100%">
+        </div>
+
+      </div>
+    </div>
+    <!--/ Results. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{vidsplat2026,
+  title     = {VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors},
+  author    = {Anonymous},
+  booktitle = {ACM SIGGRAPH 2026 Conference Proceedings},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/abs/xxxx.xxxxx">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/tangjm24/VidSplat" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
