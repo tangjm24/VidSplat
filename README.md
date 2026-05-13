@@ -1,17 +1,17 @@
 # VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors
 
-### [Project Page](https://tangjm24.github.io/VidSplat) | [Paper (ArXiv)](https://arxiv.org/abs/xxxx.xxxxx) | [Video](https://youtu.be/xxxx)
+### [Project Page](https://tangjm24.github.io/VidSplat) | [Paper (ArXiv)](https://arxiv.org/abs/2605.11424) | [Video](https://youtu.be/xxxx)
 
 > **VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors**
 >
-> [Jimin Tang](https://tangjm24.github.io/)\*,
-> [Wenyuan Zhang]()\*,
+> Jimin Tang\*,
+> Wenyuan Zhang\*,
 > Junsheng Zhou,
 > Zian Huang,
 > Kanle Shi,
 > Shenkun Xu,
-> [Yu-Shen Liu](https://yushen-liu.github.io/)†,
-> [Zhizhong Han](https://h312h.github.io/)
+> Yu-Shen Liu†,
+> Zhizhong Han
 >
 > School of Software, Tsinghua University &nbsp;|&nbsp; Kuaishou Technology &nbsp;|&nbsp; Wayne State University
 >
