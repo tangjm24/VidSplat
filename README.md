@@ -4,9 +4,20 @@
 
 > **VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors**
 >
-> *Anonymous Authors*
+> [Jimin Tang](https://tangjm24.github.io/)\*,
+> [Wenyuan Zhang]()\*,
+> Junsheng Zhou,
+> Zian Huang,
+> Kanle Shi,
+> Shenkun Xu,
+> [Yu-Shen Liu](https://yushen-liu.github.io/)†,
+> [Zhizhong Han](https://h312h.github.io/)
 >
-> **ACM SIGGRAPH 2026 Conference Paper**
+> School of Software, Tsinghua University &nbsp;|&nbsp; Kuaishou Technology &nbsp;|&nbsp; Wayne State University
+>
+> \* Equal contribution &nbsp;&nbsp; † Corresponding author
+>
+> **SIGGRAPH 2026 Conference Paper**
 
 <p align="center">
   <img src="assets/teaser.png" width="100%">
@@ -61,18 +72,20 @@ Given sparse input views, we sample novel camera trajectories and employ a camer
 If you find this work useful, please consider citing:
 
 ```bibtex
-@article{vidsplat2026,
-  title={VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors},
-  author={Anonymous},
-  booktitle={ACM SIGGRAPH 2026 Conference Proceedings},
-  year={2026},
-  publisher={ACM}
+@inproceedings{tang2026vidsplat,
+  title     = {VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors},
+  author    = {Tang, Jimin and Zhang, Wenyuan and Zhou, Junsheng and Huang, Zian and Shi, Kanle and Xu, Shenkun and Liu, Yu-Shen and Han, Zhizhong},
+  booktitle = {Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers (SIGGRAPH Conference Papers '26)},
+  year      = {2026},
+  doi       = {10.1145/3799902.3811138},
 }
 ```
 
 ## Acknowledgements
 
 Our code is built upon [2DGS](https://github.com/hbb1/2d-gaussian-splatting), [MAtCha](https://github.com/amandinesandwormatcha/matcha-gaussian-splatting), [DUSt3R](https://github.com/naver/dust3r), and [Wan2.1](https://github.com/Wan-Video/Wan2.1). We thank the authors for their excellent work.
+
+This work was partially supported by Deep Earth Probe and Mineral Resources Exploration -- National Science and Technology Major Project (2024ZD1003405), the National Natural Science Foundation of China (62272263), and in part by Kuaishou.
 
 ## License
 
