@@ -85,8 +85,6 @@ If you find this work useful, please consider citing:
 
 Our code is built upon [2DGS](https://github.com/hbb1/2d-gaussian-splatting), [MAtCha](https://github.com/amandinesandwormatcha/matcha-gaussian-splatting), [DUSt3R](https://github.com/naver/dust3r), and [Wan2.1](https://github.com/Wan-Video/Wan2.1). We thank the authors for their excellent work.
 
-This work was partially supported by Deep Earth Probe and Mineral Resources Exploration -- National Science and Technology Major Project (2024ZD1003405), the National Natural Science Foundation of China (62272263), and in part by Kuaishou.
-
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
