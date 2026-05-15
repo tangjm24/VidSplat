@@ -75,7 +75,7 @@ If you find this work useful, please consider citing:
 @inproceedings{tang2026vidsplat,
   title     = {VidSplat: Gaussian Splatting Reconstruction with Geometry-Guided Video Diffusion Priors},
   author    = {Tang, Jimin and Zhang, Wenyuan and Zhou, Junsheng and Huang, Zian and Shi, Kanle and Xu, Shenkun and Liu, Yu-Shen and Han, Zhizhong},
-  booktitle = {SIGGRAPH 2026 Conference Paper)},
+  booktitle = {SIGGRAPH 2026 Conference Paper},
   year      = {2026},
   doi       = {10.1145/3799902.3811138},
 }
